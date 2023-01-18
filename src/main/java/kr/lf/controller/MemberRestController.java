@@ -1,6 +1,9 @@
 package kr.lf.controller;
 
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -10,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.lf.entity.MemberDTO;
@@ -36,11 +38,12 @@ public class MemberRestController {
 	
 	}
 	@GetMapping("/{id}")
-	public String login(@PathVariable("id") String id,@RequestPart("pw") String pw, Model model) {
+	public String login(@PathVariable("id") String id,@RequestParam("pw") String pw, HttpServletRequest request) {
 		int info = memberMapper.login(id,pw);
 		if(info >0) {
 			System.out.println("성공");
-			model.setAttribute("info",info);
+			HttpSession session = request.getSession();
+			session.setAttribute("info",id);
 			return "/home";
 		}else {
 			System.out.println("실패");
