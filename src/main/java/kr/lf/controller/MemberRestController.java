@@ -37,13 +37,13 @@ public class MemberRestController {
 		 
 	
 	}
-	@GetMapping("/{id}")
-	public String login(@PathVariable("id") String id,@RequestParam("pw") String pw, HttpServletRequest request) {
-		int info = user_infoMapper.login(id,pw);
+	@PostMapping("/{user_id}{user_pw}")
+	public String login(@PathVariable("user_id") String user_id,@PathVariable("user_pw") String user_pw, HttpServletRequest request) {
+		int info = user_infoMapper.login(user_id,user_pw);
 		if(info >0) {
 			System.out.println("성공");
 			HttpSession session = request.getSession();
-			session.setAttribute("info",id);
+			session.setAttribute("info",user_id);
 			return "/home";
 		}else {
 			System.out.println("실패");
