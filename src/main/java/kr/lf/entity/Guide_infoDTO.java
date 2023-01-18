@@ -9,10 +9,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @Setter
 @RequiredArgsConstructor
-public class MemberDTO {
-
-	private String id;
-	private String pw;
-	private String hp;
-	private String email;
+public class Guide_infoDTO {
+	private int guide_seq;
+	private String design;
+	private int price;
+	private String used;
+	private int category_seq;
 }

@@ -15,20 +15,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import kr.lf.entity.MemberDTO;
-import kr.lf.mapper.MemberMapper;
+import kr.lf.entity.User_infoDTO;
+import kr.lf.mapper.User_infoMapper;
 @CrossOrigin
 @RestController
 @RequestMapping(value = "/users")
 public class MemberRestController {
 	@Autowired
-	private MemberMapper memberMapper;
+	private User_infoMapper user_infoMapper;
 	
 	//회원 가입
 	@PostMapping
-	void insertUser(@RequestBody MemberDTO user) {
+	void insertUser(@RequestBody User_infoDTO user) {
 		System.out.println(user);
-		int a = memberMapper.join(user);
+		int a = user_infoMapper.join(user);
 		if(a>0) {
 			System.out.println("성공");
 		}else {
@@ -39,7 +39,7 @@ public class MemberRestController {
 	}
 	@GetMapping("/{id}")
 	public String login(@PathVariable("id") String id,@RequestParam("pw") String pw, HttpServletRequest request) {
-		int info = memberMapper.login(id,pw);
+		int info = user_infoMapper.login(id,pw);
 		if(info >0) {
 			System.out.println("성공");
 			HttpSession session = request.getSession();

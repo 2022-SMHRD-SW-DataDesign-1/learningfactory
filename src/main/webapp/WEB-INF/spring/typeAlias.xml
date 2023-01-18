@@ -3,6 +3,11 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias type="kr.lf.entity.MemberDTO" alias="MemberDTO"/>
+		<typeAlias type="kr.lf.entity.User_infoDTO" alias="User_infoDTO"/>
+		<typeAlias type="kr.lf.entity.Test_infoDTO" alias="Test_infoDTO"/>
+		<typeAlias type="kr.lf.entity.Category_infoDTO" alias="Category_infoDTO"/>
+		<typeAlias type="kr.lf.entity.Comment_infoDTO" alias="Comment_infoDTO"/>
+		<typeAlias type="kr.lf.entity.Guide_infoDTO" alias="Guide_infoDTO"/>
+		<typeAlias type="kr.lf.entity.Recommend_infoDTO" alias="Recommend_infoDTO"/>
 	</typeAliases>
 </configuration>
