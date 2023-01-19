@@ -37,9 +37,12 @@ public class MemberRestController {
 		 
 	
 	}
-	@PostMapping("/{user_id}{user_pw}")
+	@PostMapping("/{user_id}&{user_pw}")
 	public String login(@PathVariable("user_id") String user_id,@PathVariable("user_pw") String user_pw, HttpServletRequest request) {
-		int info = user_infoMapper.login(user_id,user_pw);
+		System.out.println(user_id);
+		System.out.println(user_pw);
+		int info = user_infoMapper.login(user_id, user_pw);
+		System.out.println("usermapper");
 		if(info >0) {
 			System.out.println("성공");
 			HttpSession session = request.getSession();
