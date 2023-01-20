@@ -1,5 +1,6 @@
 package kr.lf.entity;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -14,6 +15,6 @@ class Comment_infoDTO {
 	private int cmt_seq;
 	private int test_seq;
 	private String cmt_content;
-	private Date cmt_dt;
+	private Timestamp cmt_dt;
 	private String user_id;
 }

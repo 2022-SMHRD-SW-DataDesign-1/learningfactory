@@ -1,6 +1,6 @@
 package kr.lf.entity;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,5 +15,5 @@ public class Recommend_infoDTO {
 	private int reco_seq;
 	private int test_seq;
 	private String user_id;
-	private Date reco_dt;
+	private Timestamp reco_dt;
 }

@@ -1,6 +1,6 @@
 package kr.lf.entity;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,7 +20,7 @@ import lombok.Setter;
 	 private String test_cuesheet;
 	 private String test_video;
 	 private String test_video_realname;
-	 private Date reg_dt;
+	 private Timestamp reg_dt;
 	 private String user_id;
 	 private int category_seq;
 	
