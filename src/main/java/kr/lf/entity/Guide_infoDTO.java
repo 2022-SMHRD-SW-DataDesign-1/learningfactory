@@ -2,13 +2,13 @@ package kr.lf.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @AllArgsConstructor
 @Setter
-@RequiredArgsConstructor
+@NoArgsConstructor
 public class Guide_infoDTO {
 	private int guide_seq;
 	private String design;

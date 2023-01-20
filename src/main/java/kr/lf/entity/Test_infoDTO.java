@@ -4,8 +4,13 @@ import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+@Getter
+@AllArgsConstructor
+@Setter
+@NoArgsConstructor
 
  class Test_infoDTO {
 	 private int test_seq;

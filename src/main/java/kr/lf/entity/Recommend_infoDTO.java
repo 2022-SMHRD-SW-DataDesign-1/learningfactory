@@ -4,13 +4,13 @@ import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @AllArgsConstructor
 @Setter
-@RequiredArgsConstructor
+@NoArgsConstructor
 public class Recommend_infoDTO {
 	private int reco_seq;
 	private int test_seq;

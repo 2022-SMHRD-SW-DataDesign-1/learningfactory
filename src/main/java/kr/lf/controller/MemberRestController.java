@@ -21,6 +21,7 @@ import kr.lf.mapper.User_infoMapper;
 @RestController
 @RequestMapping(value = "/users")
 public class MemberRestController {
+	
 	@Autowired
 	private User_infoMapper user_infoMapper;
 	
@@ -37,7 +38,7 @@ public class MemberRestController {
 		 
 	
 	}
-	@PostMapping("/{user_id}/{user_pw}")
+	@PostMapping("/{user_id}&{user_pw}")
 	public String login(@PathVariable("user_id") String user_id,@PathVariable("user_pw") String user_pw, HttpServletRequest request) {
 		System.out.println("들어옴");
 		System.out.println(user_id);
