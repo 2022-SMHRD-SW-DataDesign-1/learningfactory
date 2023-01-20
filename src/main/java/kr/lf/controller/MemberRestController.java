@@ -43,7 +43,8 @@ public class MemberRestController {
 		System.out.println("들어옴");
 		System.out.println(user_id);
 		System.out.println(user_pw);
-		int info = user_infoMapper.login(user_id,user_pw);
+		int info = user_infoMapper.login(user_id, user_pw);
+		System.out.println("usermapper");
 		if(info >0) {
 			System.out.println("성공");
 			HttpSession session = request.getSession();
