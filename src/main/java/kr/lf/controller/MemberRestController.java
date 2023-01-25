@@ -28,6 +28,7 @@ public class MemberRestController {
 	//회원 가입
 	@PostMapping
 	void insertUser(@RequestBody User_infoDTO user) {
+		System.out.println("ddddd");
 		System.out.println(user);
 		int a = user_infoMapper.join(user);
 		if(a>0) {
@@ -51,11 +52,11 @@ public class MemberRestController {
 		if(info != null) {
 			System.out.println("성공");
 			HttpSession session = request.getSession();
-			session.setAttribute("info",user_id);
-			return "/home";
+			session.setAttribute("info",info);
+			return user_id;
 		}else {
 			System.out.println("실패");
-			return "/login";
+			return "";
 		}
 	}
 }

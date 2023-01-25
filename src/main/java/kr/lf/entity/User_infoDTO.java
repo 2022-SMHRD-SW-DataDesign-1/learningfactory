@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -12,6 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Setter
 @RequiredArgsConstructor
+@NoArgsConstructor
 public class User_infoDTO {
 	
 	@NonNull
