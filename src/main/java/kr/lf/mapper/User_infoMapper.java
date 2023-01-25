@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import kr.lf.entity.User_infoDTO;
 
@@ -17,4 +18,7 @@ public interface User_infoMapper {
 	public User_infoDTO login(User_infoDTO dto);
 	@Select("select * from user_info")
 	public List<User_infoDTO> showlist();
+	//회원정보수정
+	@Update("update user_info set user_pw = #{user_pw}, user_hp = #{user_hp} where user_id = #{user_id}")
+	public int updatemember(User_infoDTO dto);
 }
