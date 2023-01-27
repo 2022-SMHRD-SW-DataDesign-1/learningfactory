@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 
- class Test_infoDTO {
+ public class Test_infoDTO {
 	 private int test_seq;
 	 private String test_title;
 	 private String test_photo;
