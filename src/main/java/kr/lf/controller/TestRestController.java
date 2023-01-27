@@ -31,5 +31,12 @@ public class TestRestController {
 		List<Test_infoDTO> list = test_infoMapper.loadTest();
 		return list;
 	}
+	
+	@GetMapping
+	public int deleteTest(int num) {
+		System.out.println("테스트 삭제 입니다.");
+		int row = test_infoMapper.deleteTest(num);
+		return row;
+	}
 
 }
