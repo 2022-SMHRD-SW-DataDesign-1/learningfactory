@@ -9,12 +9,10 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-=======
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-SW-DataDesign-1/learningfactory.git
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
