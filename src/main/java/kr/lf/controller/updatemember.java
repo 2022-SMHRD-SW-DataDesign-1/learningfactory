@@ -19,24 +19,20 @@ import kr.lf.mapper.User_infoMapper;
 @RequestMapping(value = "/users")
 public class updatemember {
 
-
-				@Autowired
-		private User_infoMapper user_infoMapper;
+	/*
+	 * @Autowired private User_infoMapper user_infoMapper;
+	 * 
+	 * 
+	 * @PostMapping("/{user_id}") void updatemember(@PathVariable("user_id") String
+	 * user_id,@RequestBody User_infoDTO user) { System.out.println("ddddd");
+	 * System.out.println(user); int a = user_infoMapper.updatemember(user); if(a>0)
+	 * { System.out.println("성공"); }else { System.out.println("실패"); }
+	 * 
+	 * 
+	 * }
+	 */
 		
-		
-		@PostMapping("/{user_id}")
-		void updatemember(@PathVariable("user_id") String  user_id,@RequestBody User_infoDTO user) {
-			System.out.println("ddddd");
-			System.out.println(user);
-			int a = user_infoMapper.updatemember(user);
-			if(a>0) {
-				System.out.println("성공");
-			}else {
-				System.out.println("실패");
-			}
-			 
-		
-		}}
+}
 
 		
 	
