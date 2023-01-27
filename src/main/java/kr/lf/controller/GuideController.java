@@ -1,5 +1,6 @@
 package kr.lf.controller;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,26 +12,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import kr.lf.entity.Guide_infoDTO;
 import kr.lf.entity.Test_infoDTO;
 import kr.lf.entity.User_infoDTO;
+import kr.lf.mapper.Guide_infoMapper;
 import kr.lf.mapper.Test_infoMapper;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/test")
-public class TestRestController {
-	
+@RequestMapping(value = "/guide")
+public class GuideController {
+
 	@Autowired
-	private Test_infoMapper test_infoMapper;
-	
+	private Guide_infoMapper guide_infomapper;
 	
 	@GetMapping
-	public List<Test_infoDTO> loadTest() {
-		System.out.println("test소환ㅃ@!");
-		Test_infoDTO dto = new Test_infoDTO();
-		List<Test_infoDTO> list = test_infoMapper.loadTest();
+	public List<Guide_infoDTO> cuesheet(){
+		System.out.println("쓋");
+		Guide_infoDTO dto = new Guide_infoDTO();
+		List<Guide_infoDTO> list = guide_infomapper.cuesheet();
 		return list;
+	}
 	}
 	
 
-}
