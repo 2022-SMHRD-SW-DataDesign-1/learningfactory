@@ -58,5 +58,17 @@ public class MemberRestController {
 			System.out.println("실패");
 			return "";
 		}
+		}
+		@RequestMapping(value = "/users")
+		@PostMapping()
+		void updatemember(@RequestBody User_infoDTO user) {
+			System.out.println("ddddd");
+			System.out.println(user);
+			int a = user_infoMapper.updatemember(user);
+			if (a > 0) {
+				System.out.println("성공");
+			} else {
+				System.out.println("실패");
 	}
+}
 }
