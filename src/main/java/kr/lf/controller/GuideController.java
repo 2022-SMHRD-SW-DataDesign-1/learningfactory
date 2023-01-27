@@ -13,10 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.lf.entity.Guide_infoDTO;
-import kr.lf.entity.Test_infoDTO;
-import kr.lf.entity.User_infoDTO;
+
 import kr.lf.mapper.Guide_infoMapper;
-import kr.lf.mapper.Test_infoMapper;
+
 
 @CrossOrigin
 @RestController
@@ -31,6 +30,7 @@ public class GuideController {
 		System.out.println("쓋");
 		Guide_infoDTO dto = new Guide_infoDTO();
 		List<Guide_infoDTO> list = guide_infomapper.cuesheet();
+		
 		return list;
 	}
 	}

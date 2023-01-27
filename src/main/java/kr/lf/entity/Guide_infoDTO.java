@@ -11,6 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Guide_infoDTO {
 	private int guide_seq;
+	private String cuesheet;
 	private String design;
 	private int price;
 	private String used;
