@@ -1,5 +1,14 @@
 package kr.lf.mapper;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Select;
+
+import kr.lf.entity.Test_infoDTO;
+
 public interface Test_infoMapper {
 	//모의테스트 저장
+	
+	@Select("select * from test_info")
+	public List<Test_infoDTO> loadTest();
 }
