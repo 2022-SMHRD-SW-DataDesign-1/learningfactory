@@ -18,7 +18,6 @@ public interface User_infoMapper {
 	public User_infoDTO login(User_infoDTO dto);
 	@Select("select * from user_info")
 	public List<User_infoDTO> showlist();
-	//회원정보수정
-	@Update("update user_info set user_pw = #{user_pw}, user_hp = #{user_hp} where user_id = #{user_id}")
+	@Update("update user_info set user_pw = #{user_pw}, user_hp = #{user_hp}, user_email = #{user_email} where user_id = #{user_id}")
 	public int updatemember(User_infoDTO dto);
 }
