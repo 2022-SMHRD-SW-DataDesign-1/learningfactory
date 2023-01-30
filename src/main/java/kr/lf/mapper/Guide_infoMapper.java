@@ -15,7 +15,7 @@ import kr.lf.entity.Test_infoDTO;
 
 public interface Guide_infoMapper {
 	
-	@Select("select cuesheet from guide_info where category_seq = 21")
+	@Select("select cuesheet from guide_info")
 	public List<Guide_infoDTO> cuesheet();
 
 }
