@@ -56,7 +56,7 @@ public class MemberRestController {
 			return user_id;
 		}else {
 			System.out.println("실패");
-			return "";
+			return "/login";
 		}
 		}
 		@RequestMapping(value = "/users")

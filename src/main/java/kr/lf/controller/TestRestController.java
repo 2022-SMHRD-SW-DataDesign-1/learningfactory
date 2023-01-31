@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -62,6 +63,7 @@ public class TestRestController {
 //		return row;
 //	}
 	
+
 	@RequestMapping(value="/AxiosFileTest.do", method=RequestMethod.POST)
 	public  String AxiosFileTest (HttpServletRequest request, @RequestParam(value="file", required=false) MultipartFile[] files) throws SQLException  {
 		Map<String,Object> resultMap = new HashMap<String,Object>();
@@ -96,6 +98,30 @@ public class TestRestController {
 		return FileNames;
 	}
 	
+
+	@GetMapping("/{test_seq}")
+	public Test_infoDTO detailTest(@PathVariable("test_seq") int test_seq) {
+		System.out.println("spring in");
+		Test_infoDTO dto = new Test_infoDTO();
+		
+		
+		dto = test_infoMapper.detailTest(test_seq);
+		return dto;
+	}
+	@Autowired
+	private Test_infoMapper test;
+	
+	@RequestMapping(value = "/test")
+	@PostMapping
+	public void testInsert(@RequestBody Test_infoDTO dto) {
+		System.out.println(dto);
+		int row = test.testInsert(dto);
+		if(row >0) {
+			System.out.println("성공");
+		}else {
+			System.out.println("실패");
+		}
+	}
 }
 
 
