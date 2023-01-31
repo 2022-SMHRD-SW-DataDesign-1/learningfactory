@@ -23,5 +23,6 @@ import lombok.Setter;
 	 private Timestamp reg_dt;
 	 private String user_id;
 	 private int category_seq;
+	 private String test_content;
 	
 }

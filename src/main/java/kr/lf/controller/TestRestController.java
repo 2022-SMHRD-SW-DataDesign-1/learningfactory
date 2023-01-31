@@ -26,6 +26,7 @@ import org.springframework.web.multipart.MultipartFile;
 import kr.lf.entity.Test_infoDTO;
 import kr.lf.entity.User_infoDTO;
 import kr.lf.mapper.Test_infoMapper;
+import oracle.jdbc.proxy.annotation.Post;
 
 @CrossOrigin
 @RestController
@@ -52,9 +53,17 @@ public class TestRestController {
 		List<Test_infoDTO> list = test_infoMapper.loadTest();
 		return list;
 	}
+	
 
-	@RequestMapping(value="AxiosFileTest.do", method=RequestMethod.POST)
-	public  Map<String,Object> AxiosFileTest (HttpServletRequest request, @RequestParam(value="file", required=false) MultipartFile[] files) throws SQLException  {
+//	@GetMapping
+//	public int deleteTest(int num) {
+//		System.out.println("테스트 삭제 입니다.");
+//		int row = test_infoMapper.deleteTest(num);
+//		return row;
+//	}
+	
+	@RequestMapping(value="/AxiosFileTest.do", method=RequestMethod.POST)
+	public  String AxiosFileTest (HttpServletRequest request, @RequestParam(value="file", required=false) MultipartFile[] files) throws SQLException  {
 		Map<String,Object> resultMap = new HashMap<String,Object>();
 		String FileNames ="";
 		System.out.println("paramMap =>"+files[0]);
@@ -84,8 +93,9 @@ public class TestRestController {
 		FileNames = FileNames.substring(1);
 		System.out.println("FileNames =>"+ FileNames);
 		resultMap.put("JavaData", paramMap);
-		return resultMap;
+		return FileNames;
 	}
+	
 }
 
 
