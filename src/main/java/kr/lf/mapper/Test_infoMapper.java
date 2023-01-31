@@ -15,4 +15,7 @@ public interface Test_infoMapper {
 	@Delete("delete from test_info where test_seq=#{test_seq}")
 	public int deleteTest(int test_seq);
 	
+	@Select("select * from test_info where test_seq=#{test_seq}")
+	public Test_infoDTO detailTest(int test_seq);
+	
 }
