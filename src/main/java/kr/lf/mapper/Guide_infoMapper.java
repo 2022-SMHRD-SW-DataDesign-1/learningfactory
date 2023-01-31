@@ -15,7 +15,10 @@ import kr.lf.entity.Test_infoDTO;
 
 public interface Guide_infoMapper {
 	
-	@Select("select cuesheet from guide_info where category_seq = 21")
+	@Select("select cuesheet from guide_info where category_seq=21")
 	public List<Guide_infoDTO> cuesheet();
+	
+	@Select("select design from guide_info where tfidf_value > 1 and tfidf_posi = 'Y' and category_seq=21")
+	public List<Guide_infoDTO> design();
 
 }
