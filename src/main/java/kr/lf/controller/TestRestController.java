@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -62,6 +64,16 @@ public class TestRestController {
 //		int row = test_infoMapper.deleteTest(num);
 //		return row;
 //	}
+	@PostMapping("/Mypage")
+	public List<Test_infoDTO> loadMyTest(@RequestBody String user_id){
+		// 여기 값이 user_id + "=" 이 붙어서 나옴. 이유는 잘모르겠음, 누군가 발견한다면 잘 설명 좀 부탁  
+		System.out.println(user_id);
+		String userID = user_id.split("=")[0];
+		List<Test_infoDTO> list = test_infoMapper.loadMyTest(userID);
+		
+		return list;
+	}
+	
 	
 
 	@RequestMapping(value="/AxiosFileTest.do", method=RequestMethod.POST)
