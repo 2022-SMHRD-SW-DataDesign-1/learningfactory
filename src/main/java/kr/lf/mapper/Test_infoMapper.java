@@ -12,10 +12,14 @@ public interface Test_infoMapper {
 	
 	@Select("select * from test_info")
 	public List<Test_infoDTO> loadTest();
+	
 	@Delete("delete from test_info where test_seq=#{test_seq}")
 	public int deleteTest(int test_seq);
 	
 	@Select("select * from test_info where test_seq=#{test_seq}")
 	public Test_infoDTO detailTest(int test_seq);
+	
+	@Select("select * from test_info where user_id=#{user_id}")
+	public List<Test_infoDTO> loadMyTest(String user_id);
 	
 }
