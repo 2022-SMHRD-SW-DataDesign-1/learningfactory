@@ -125,13 +125,16 @@ public class TestRestController {
 	
 	@RequestMapping(value = "/test")
 	@PostMapping
-	public void testInsert(@RequestBody Test_infoDTO dto) {
-		System.out.println(dto);
+	public String testInsert(@RequestBody Test_infoDTO dto) {
+		System.out.println(dto.getCategory_seq());
+		System.out.println(dto.getTest_title());
 		int row = test.testInsert(dto);
 		if(row >0) {
 			System.out.println("성공");
+			return "/testlist";
 		}else {
 			System.out.println("실패");
+			return "";
 		}
 	}
 }
