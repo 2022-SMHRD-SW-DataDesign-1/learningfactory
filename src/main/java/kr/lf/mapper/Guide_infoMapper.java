@@ -16,7 +16,8 @@ import kr.lf.entity.Test_infoDTO;
 public interface Guide_infoMapper {
 	
 
-	@Select("select cuesheet from guide_info")
+	@Select("select * from guide_info")
 	public List<Guide_infoDTO> cuesheet();
 	
+
 }
