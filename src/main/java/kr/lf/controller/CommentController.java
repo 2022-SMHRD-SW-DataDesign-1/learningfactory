@@ -24,9 +24,9 @@ public class CommentController {
 	@Autowired
 	private Comment_infoMapper comment_infomapper;
 	
-	@RequestMapping(value = "/comment")
-	@PostMapping
-	void comment(@RequestBody Comment_infoDTO comment) {
+	
+	@PostMapping(value="/")
+	public void comment(@RequestBody Comment_infoDTO comment) {
 		System.out.println("ddddd");
 		System.out.println(comment);
 		int a = comment_infomapper.comment(comment);
