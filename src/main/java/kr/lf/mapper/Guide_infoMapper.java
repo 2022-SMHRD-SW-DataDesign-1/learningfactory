@@ -19,7 +19,5 @@ public interface Guide_infoMapper {
 	@Select("select * from guide_info")
 	public List<Guide_infoDTO> cuesheet();
 	
-	//@Select("select design from guide_info where tfidf_value > 1 and tfidf_posi = 'Y' and category_seq=21")
-	//public List<Guide_infoDTO> design();
 
 }

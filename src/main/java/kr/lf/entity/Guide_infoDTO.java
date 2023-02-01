@@ -12,8 +12,5 @@ import lombok.Setter;
 public class Guide_infoDTO {
 	private int guide_seq;
 	private String cuesheet;
-	private String design;
-	private int price;
-	private String used;
 	private int category_seq;
 }
