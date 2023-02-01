@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.lf.entity.Comment_infoDTO;
@@ -46,10 +47,12 @@ public class CommentController {
 //	}
 	@RequestMapping(value = "/showComment")
 	@GetMapping
-	public List<Comment_infoDTO> showComment(){
-		System.out.println("쓋");
-		Comment_infoDTO dto = new Comment_infoDTO();
-		List<Comment_infoDTO> list = comment_infomapper.showComment();
+	public List<Comment_infoDTO> showComment(@RequestParam("test_seq") int test_seq){
+		System.out.println("showComment()");
+		//Comment_infoDTO dto = new Comment_infoDTO();
+		List<Comment_infoDTO> list = comment_infomapper.showComment(test_seq);
+		System.out.println(list);
+		System.out.println("sho15115ent()");
 		return list;
 	}
 //	@RequestMapping(value = "/deleteComment")
