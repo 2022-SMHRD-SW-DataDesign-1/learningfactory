@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kr.lf.entity.Guide_infoDTO;
-
+import kr.lf.entity.Review_infoDTO;
 import kr.lf.mapper.Guide_infoMapper;
 
 
@@ -25,7 +25,7 @@ public class GuideController {
 	@Autowired
 	private Guide_infoMapper guide_infomapper;
 	
-	@GetMapping
+	@GetMapping(value="/")
 	public List<Guide_infoDTO> cuesheet(){
 		System.out.println("쓋");
 		Guide_infoDTO dto = new Guide_infoDTO();
@@ -33,13 +33,20 @@ public class GuideController {
 		
 		return list;
 	}
-	@GetMapping
-	@RequestMapping(value = "/stt")
-	public List<Guide_infoDTO> stt(){
-		System.out.println("stt");
-		Guide_infoDTO dto = new Guide_infoDTO();
-		List<Guide_infoDTO> list = guide_infomapper.stt();
+
 		
+
+	
+	@PostMapping(value = "/review")
+	public List<Review_infoDTO> review(){
+		System.out.println("리뷰함수 통과");
+		Review_infoDTO dto = new Review_infoDTO();
+		
+		List<Review_infoDTO> list= guide_infomapper.review();
+		
+		
+		System.out.println("리뷰 데이터 생성");
+
 		return list;
 	}
 }
