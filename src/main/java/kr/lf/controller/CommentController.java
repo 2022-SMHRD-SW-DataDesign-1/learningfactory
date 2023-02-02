@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,14 +46,12 @@ public class CommentController {
 //		List<Comment_infoDTO> list = comment_infomapper.mypage();
 //		return list;
 //	}
-	@RequestMapping(value = "/showComment")
-	@GetMapping
-	public List<Comment_infoDTO> showComment(@RequestParam("test_seq") int test_seq){
-		System.out.println("showComment()");
-		//Comment_infoDTO dto = new Comment_infoDTO();
+	
+	@GetMapping("/{test_seq}")
+	public List<Comment_infoDTO> showComment(@PathVariable("test_seq") int test_seq){
+		System.out.println("showcomment들어옴");
 		List<Comment_infoDTO> list = comment_infomapper.showComment(test_seq);
-		System.out.println(list);
-		System.out.println("sho15115ent()");
+		System.out.println("showcomment나감");
 		return list;
 	}
 //	@RequestMapping(value = "/deleteComment")
