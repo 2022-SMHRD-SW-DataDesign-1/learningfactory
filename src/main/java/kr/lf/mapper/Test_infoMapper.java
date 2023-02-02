@@ -18,6 +18,7 @@ public interface Test_infoMapper {
 	
 	@Select("select * from test_info where test_seq=#{test_seq}")
 	public Test_infoDTO detailTest(int test_seq);
+
 	@Insert("insert into test_info values(test_seq.nextval,#{test_title},#{test_photo},#{test_price},#{test_cuesheet},#{test_video},#{test_video_realname},sysdate,#{user_id},#{category_seq},#{test_content})")
 	public int testInsert(Test_infoDTO dto);
 	

@@ -30,7 +30,7 @@ public class TestController {
 	@Autowired
 	private Test_infoMapper test_info;
 	
-	@PostMapping("/file")
+	@PostMapping
 	public ResponseEntity<StreamingResponseBody> videoList(@RequestBody String name) {
 		System.out.println("들어왓다");
 		String file_name = name.split("=")[0];
@@ -49,7 +49,7 @@ public class TestController {
         final HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.add("Content-Type", "video/mp4");
         responseHeaders.add("Content-Length", Long.toString(file.length()));
-
+        System.out.println(file.length());
         return ResponseEntity.ok().headers(responseHeaders).body(streamingResponseBody);
 		//		try{
 //            fis = new FileInputStream(path);
