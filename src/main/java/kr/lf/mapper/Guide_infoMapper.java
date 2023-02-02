@@ -16,8 +16,9 @@ import kr.lf.entity.Test_infoDTO;
 public interface Guide_infoMapper {
 	
 
-	@Select("select * from guide_info")
+	@Select("select * from guide_info where cuesheet is not null")
 	public List<Guide_infoDTO> cuesheet();
 	
-
+	@Select("select stt,score from guide_info where score > 22")
+	public List<Guide_infoDTO> stt();
 }

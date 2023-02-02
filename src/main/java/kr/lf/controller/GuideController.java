@@ -33,6 +33,15 @@ public class GuideController {
 		
 		return list;
 	}
+	@GetMapping
+	@RequestMapping(value = "/stt")
+	public List<Guide_infoDTO> stt(){
+		System.out.println("stt");
+		Guide_infoDTO dto = new Guide_infoDTO();
+		List<Guide_infoDTO> list = guide_infomapper.stt();
+		
+		return list;
+	}
 }
 
 	
