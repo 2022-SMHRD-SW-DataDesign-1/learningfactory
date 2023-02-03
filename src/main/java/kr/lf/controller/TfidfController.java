@@ -23,16 +23,16 @@ public class TfidfController {
 	
 	
 	
-	@GetMapping("/review")
-	public List<Tfidf_infoDTO> review(){
-		System.out.println("리뷰데이터");
-		Tfidf_infoDTO dto = new Tfidf_infoDTO();
-		List<Tfidf_infoDTO> list = tfidf_infoMapper.review();
-		
-		
-		return list;
-	}
-	
+//	@GetMapping("/review")
+//	public List<Tfidf_infoDTO> review(){
+//		System.out.println("리뷰데이터");
+//		Tfidf_infoDTO dto = new Tfidf_infoDTO();
+//		List<Tfidf_infoDTO> list = tfidf_infoMapper.review();
+//		
+//		
+//		return list;
+//	}
+//	
 
 	}
 	

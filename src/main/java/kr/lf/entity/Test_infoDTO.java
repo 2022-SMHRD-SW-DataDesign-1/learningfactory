@@ -24,5 +24,7 @@ import lombok.Setter;
 	 private String user_id;
 	 private int category_seq;
 	 private String test_content;
+	 private int test_view_count;
+	 private int test_like_count;
 	
 }
