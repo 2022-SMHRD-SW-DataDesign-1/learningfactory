@@ -20,7 +20,7 @@ import lombok.Setter;
 	 private String test_cuesheet;
 	 private String test_video;
 	 private String test_video_realname;
-	 private Timestamp reg_dt;
+	 private String reg_dt;
 	 private String user_id;
 	 private int category_seq;
 	 private String test_content;
