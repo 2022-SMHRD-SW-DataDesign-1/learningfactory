@@ -33,6 +33,9 @@ public class GuideController {
 		
 		return list;
 	}
+
+		
+
 	
 	@PostMapping(value = "/review")
 	public List<Review_infoDTO> review(){
@@ -43,6 +46,7 @@ public class GuideController {
 		
 		
 		System.out.println("리뷰 데이터 생성");
+
 		return list;
 	}
 }

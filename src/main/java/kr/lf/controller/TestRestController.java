@@ -138,6 +138,22 @@ public class TestRestController {
 			return "";
 		}
 	}
+	@RequestMapping(value = "/likeselect")
+	@PostMapping
+	public void testLike(@RequestBody int test_seq) {
+		System.out.println(test_seq);
+		// 좋아요 테이블 정보 들어가야합니다~.
+		  test.testLike(test_seq);
+		  
+		  int row = test.testLike(test_seq);
+		  
+		  if (row>0) {
+			  System.out.println("통과 기모찡");
+		  }else {
+			  System.out.println("젠쟝");
+		  
+		  }
+	}
 }
 
 

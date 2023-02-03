@@ -15,8 +15,10 @@ public class Guide_infoDTO {
 	private int guide_seq;
 	private String cuesheet;
 	private int category_seq;
+
 	
 	private int score;
 	
 	private String stt;
+
 }

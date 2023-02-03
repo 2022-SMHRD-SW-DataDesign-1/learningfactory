@@ -22,6 +22,6 @@ public class User_infoDTO {
 	private String user_pw;
 	private String user_hp;
 	private String user_email;
-	private Timestamp user_joindate;
+	private String user_joindate;
 	private String user_type;
 }
