@@ -94,7 +94,7 @@ public class TestRestController {
 
 	            String safeFile =System.currentTimeMillis() + originFileName;
 
-	            FileNames = FileNames+","+safeFile; 
+	            FileNames = safeFile; 
 	            try {
 	            	File f1 = new File(filepath+safeFile);
 	                mf.transferTo(f1);
@@ -104,10 +104,11 @@ public class TestRestController {
 	                e.printStackTrace();
 	            }
 	        }
-		Map<String, Object> paramMap = new HashMap<String, Object>();
-		FileNames = FileNames.substring(1);
-		System.out.println("FileNames =>"+ FileNames);
-		resultMap.put("JavaData", paramMap);
+		   System.out.println("확인"+FileNames);
+//		Map<String, Object> paramMap = new HashMap<String, Object>();
+//		FileNames = FileNames.substring(1);
+//		System.out.println("FileNames =>"+ FileNames);
+//		resultMap.put("JavaData", paramMap);
 		return FileNames;
 	}
 	
