@@ -10,7 +10,7 @@
 		<property name="driverClassName"
 			value="oracle.jdbc.OracleDriver"></property>
 		<property name="jdbcUrl"
-			value="jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe"></property>
+			value="jdbc:oracle:thin:@project-db-stu3.ddns.net:1524:xe"></property>
 		<property name="username" value="learning"></property>
 		<property name="password" value="factory"></property>
 	</bean>
