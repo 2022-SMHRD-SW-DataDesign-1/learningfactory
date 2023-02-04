@@ -125,6 +125,12 @@ public class TestRestController {
 	@Autowired
 	private Test_infoMapper test;
 	
+	@RequestMapping(value="/LikeCount")
+	public void LikeUp() {
+		
+		
+	}
+	
 	@RequestMapping(value = "/test")
 	@PostMapping
 	public String testInsert(@RequestBody Test_infoDTO dto) {
