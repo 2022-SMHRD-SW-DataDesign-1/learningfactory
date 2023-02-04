@@ -46,7 +46,7 @@ public class GuideController {
 		
 		
 		System.out.println("리뷰 데이터 생성");
-		System.out.println(list.get(0).getStt());
+		System.out.println(list);
 		return list;
 	}
 }
