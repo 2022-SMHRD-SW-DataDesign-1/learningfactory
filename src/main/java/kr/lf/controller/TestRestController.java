@@ -94,7 +94,7 @@ public class TestRestController {
 
 	            String safeFile =System.currentTimeMillis() + originFileName;
 
-	            FileNames = FileNames+","+safeFile; 
+	            FileNames = safeFile; 
 	            try {
 	            	File f1 = new File(filepath+safeFile);
 	                mf.transferTo(f1);
@@ -104,10 +104,11 @@ public class TestRestController {
 	                e.printStackTrace();
 	            }
 	        }
-		Map<String, Object> paramMap = new HashMap<String, Object>();
-		FileNames = FileNames.substring(1);
-		System.out.println("FileNames =>"+ FileNames);
-		resultMap.put("JavaData", paramMap);
+		   System.out.println("확인"+FileNames);
+//		Map<String, Object> paramMap = new HashMap<String, Object>();
+//		FileNames = FileNames.substring(1);
+//		System.out.println("FileNames =>"+ FileNames);
+//		resultMap.put("JavaData", paramMap);
 		return FileNames;
 	}
 	
@@ -124,6 +125,12 @@ public class TestRestController {
 	@Autowired
 	private Test_infoMapper test;
 	
+	@RequestMapping(value="/LikeCount")
+	public void LikeUp() {
+		
+		
+	}
+	
 	@RequestMapping(value = "/test")
 	@PostMapping
 	public String testInsert(@RequestBody Test_infoDTO dto) {
@@ -137,6 +144,22 @@ public class TestRestController {
 			System.out.println("실패");
 			return "";
 		}
+	}
+	@RequestMapping(value = "/likeselect")
+	@PostMapping
+	public void testLike(@RequestBody int test_seq) {
+		System.out.println(test_seq);
+		// 좋아요 테이블 정보 들어가야합니다~.
+		  test.testLike(test_seq);
+		  
+		  int row = test.testLike(test_seq);
+		  
+		  if (row>0) {
+			  System.out.println("통과 기모찡");
+		  }else {
+			  System.out.println("젠쟝");
+		  
+		  }
 	}
 }
 

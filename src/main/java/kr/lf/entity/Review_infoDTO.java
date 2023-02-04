@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Review_infoDTO {
- private float score;
+ private float stt_tfidf_value;
 	
-	private String stt;
+	private String stt_keyword;
 }

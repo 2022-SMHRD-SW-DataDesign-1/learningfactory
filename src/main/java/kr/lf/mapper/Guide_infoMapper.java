@@ -20,7 +20,9 @@ public interface Guide_infoMapper {
 	@Select("select * from guide_info where cuesheet is not null")
 	public List<Guide_infoDTO> cuesheet();
 	
-	@Select("select stt, score from guide_info where score >= 10 and rownum < 10 order by score desc")
+
+	@Select("select stt_keyword, stt_tfidf_value from stt_info where stt_tfidf_value >= 10 and rownum < 10 order by stt_tfidf_value desc")
 	public List<Review_infoDTO> review();
+
 
 }

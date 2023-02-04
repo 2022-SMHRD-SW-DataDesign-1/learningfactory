@@ -1,5 +1,7 @@
 package kr.lf.controller;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +53,9 @@ public class CommentController {
 	public List<Comment_infoDTO> showComment(@PathVariable("test_seq") int test_seq){
 		System.out.println("showcomment들어옴");
 		List<Comment_infoDTO> list = comment_infomapper.showComment(test_seq);
-		System.out.println("showcomment나감");
+		System.out.println(list.size());
+		System.out.println(list.get(0).getCmt_dt()); 
+		
 		return list;
 	}
 //	@RequestMapping(value = "/deleteComment")
