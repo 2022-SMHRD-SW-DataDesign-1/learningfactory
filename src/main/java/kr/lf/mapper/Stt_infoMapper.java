@@ -10,5 +10,5 @@ public interface Stt_infoMapper {
 
 	
 	@Select("select stt_keyword, stt_tfidf_value from stt_info where stt_tfidf_value > 30 and category_seq=#{category_seq}")
-	public List<Stt_infoDTO> sttchart(int category_seq);
+	public List<Stt_infoDTO> sttchart(int categorySeq);
 }
