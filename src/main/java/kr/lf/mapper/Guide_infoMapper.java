@@ -17,7 +17,7 @@ import kr.lf.entity.Test_infoDTO;
 public interface Guide_infoMapper {
 	
 
-	@Select("select * from guide_info where cuesheet is not null")
+	@Select("select * from guide_info order by category_seq asc")
 	public List<Guide_infoDTO> cuesheet();
 	
 
