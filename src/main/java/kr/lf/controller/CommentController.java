@@ -59,11 +59,27 @@ public class CommentController {
 		return list;
 	}
 //	@RequestMapping(value = "/deleteComment")
-//	@GetMapping
-//	public List<Comment_infoDTO> deleteComment(){
-//		System.out.println("쓋");
-//		Comment_infoDTO dto = new Comment_infoDTO();
-//		List<Comment_infoDTO> list = comment_infomapper.deleteComment();
-//		return list;
-//	}
+	@PostMapping("/deleteComment")
+	public void deleteComment(@RequestBody String cmtseq){
+		System.out.println("delete쓋");
+		int cmt_seq = Integer.parseInt(cmtseq);
+		System.out.println("cmt_seq"+cmt_seq);
+		int row = comment_infomapper.deleteComment(cmt_seq);
+		if(row>0) {
+			System.out.println("삭제 성공");
+		}else {
+			System.out.println("삭제 실패");
+		}
+	}
+	
+	@PostMapping("/comment")
+	public List<Comment_infoDTO> myComment(@RequestBody String user){
+		System.out.println("myComment 들어옴");
+		String user_id = user.split("=")[0];
+		System.out.println("mycommentID"+user_id);
+		List<Comment_infoDTO> list = comment_infomapper.myComment(user_id);
+		System.out.println(list);
+		
+		return list;
+	}
 }

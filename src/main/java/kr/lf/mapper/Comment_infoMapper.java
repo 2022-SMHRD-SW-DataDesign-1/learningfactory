@@ -20,7 +20,9 @@ public interface Comment_infoMapper {
 	  @Select ("select * from comment_info where test_seq = #{test_seq}") 
 	  public List<Comment_infoDTO> showComment(int test_seq);
 	  
-	  @Delete("delete from comment_info where user_id = #{user_id}")
+	  @Delete("delete from comment_info where cmt_seq = #{cmt_seq}")
 	  public int deleteComment(int cmt_seq);
 	 
+	  @Select("select * from comment_info where user_id = #{user_id}")
+	  public List<Comment_infoDTO> myComment(String user_id);
 }
