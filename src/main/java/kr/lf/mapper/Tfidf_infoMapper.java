@@ -11,8 +11,12 @@ public interface Tfidf_infoMapper {
 
 	
 	
-	@Select("select * from tfidf_info")
-	public List<Tfidf_infoDTO> review();
-
+	
+	
+	@Select("select * from tfidf_info where category_seq = #{category_seq} and tfidf_value > 24  and tfidf_posinega = 'posi'")
+	public List<Tfidf_infoDTO> PosibarChart(int category_seq);
+	
+	
+	@Select("select * from tfidf_info where category_seq = #{category_seq} and tfidf_value > 22  and tfidf_posinega = 'nega'")
+	public List<Tfidf_infoDTO> NegabarChart(int category_seq);
 }
-
