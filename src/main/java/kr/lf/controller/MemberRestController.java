@@ -27,14 +27,16 @@ public class MemberRestController {
 	
 	//회원 가입
 	@PostMapping
-	void insertUser(@RequestBody User_infoDTO user) {
+	String insertUser(@RequestBody User_infoDTO user) {
 		System.out.println("ddddd");
 		System.out.println(user);
 		int a = user_infoMapper.join(user);
 		if(a>0) {
 			System.out.println("성공");
+			return "su";
 		}else {
 			System.out.println("실패");
+			return "";
 		}
 		 
 	
