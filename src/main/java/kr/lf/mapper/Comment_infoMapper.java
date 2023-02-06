@@ -17,7 +17,7 @@ public interface Comment_infoMapper {
 	  @Select("select * from comment_info where user_id = #{user_id} and test_seq = #{test_seq}") 
 	  public Comment_infoDTO myPage(Comment_infoDTO dto);
 	  
-	  @Select ("select * from comment_info where test_seq = #{test_seq}") 
+	  @Select ("select * from comment_info where test_seq = #{test_seq} order by cmt_seq desc" ) 
 	  public List<Comment_infoDTO> showComment(int test_seq);
 	  
 	  @Delete("delete from comment_info where cmt_seq = #{cmt_seq}")
