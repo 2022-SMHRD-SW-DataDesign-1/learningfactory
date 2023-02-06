@@ -60,15 +60,19 @@ public class CommentController {
 	}
 //	@RequestMapping(value = "/deleteComment")
 	@PostMapping("/deleteComment")
-	public void deleteComment(@RequestBody String cmtseq){
+	public String deleteComment(@RequestBody String cmtseq){
 		System.out.println("delete쓋");
-		int cmt_seq = Integer.parseInt(cmtseq);
+		String cmt = cmtseq.split("=")[0];
+		int cmt_seq = Integer.parseInt(cmt);
+		System.out.println("ceq확인"+cmt_seq);
 		System.out.println("cmt_seq"+cmt_seq);
 		int row = comment_infomapper.deleteComment(cmt_seq);
 		if(row>0) {
 			System.out.println("삭제 성공");
+			return "/myPage";
 		}else {
 			System.out.println("삭제 실패");
+			return "";
 		}
 	}
 	
