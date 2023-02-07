@@ -83,7 +83,7 @@ public class TestRestController {
 		System.out.println("paramMap =>"+files[0]);
 
 		//String filepath = "C:/eGovFrame-4.0.0/workspace.edu/LF/src/saveFolder/";
-		String filepath = "C:/Users/smhrd/Desktop/REACT/public/file/";
+		String filepath = "C:/Users/smhrd/Desktop/React/public/file/";
 		   for (MultipartFile mf : files) {
 
 	            String originFileName = mf.getOriginalFilename(); // 원본 파일 명
@@ -134,8 +134,9 @@ public class TestRestController {
 	@RequestMapping(value = "/test")
 	@PostMapping
 	public String testInsert(@RequestBody Test_infoDTO dto) {
-		System.out.println(dto.getCategory_seq());
-		System.out.println(dto.getTest_title());
+		System.out.println("카테시퀀스"+dto.getCategory_seq());
+		System.out.println("제목"+dto.getTest_title());
+		System.out.println("영상 리얼네임"+dto.getTest_video_realname());
 		int row = test.testInsert(dto);
 		if(row >0) {
 			System.out.println("성공");

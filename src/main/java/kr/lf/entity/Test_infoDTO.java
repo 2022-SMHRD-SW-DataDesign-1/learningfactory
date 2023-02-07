@@ -1,6 +1,5 @@
 package kr.lf.entity;
 
-import java.sql.Timestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
