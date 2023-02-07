@@ -24,6 +24,7 @@ public class RecommendController {
 		System.out.println("좋아요 추가"+recommendDTO);
 		
 		int a = Recommend_info.recommendAdd(recommendDTO);
+		Recommend_info.recommendCount(recommendDTO);
 		if(a>0) {
 			System.out.println("성공");
 		}else {
@@ -37,6 +38,7 @@ public class RecommendController {
 		System.out.println("좋아요 삭제"+recommendDTO);
 		
 		int a = Recommend_info.recommendDelete(recommendDTO);
+		Recommend_info.recommendCount(recommendDTO);
 		if(a>0) {
 			System.out.println("성공");
 		}else {

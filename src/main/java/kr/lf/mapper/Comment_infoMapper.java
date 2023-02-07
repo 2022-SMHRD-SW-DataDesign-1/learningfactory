@@ -11,13 +11,13 @@ import kr.lf.entity.Comment_infoDTO;
 public interface Comment_infoMapper {
 	//댓글
 	
-	  @Insert("insert into comment_info(test_seq, cmt_content, user_id) values (#{test_seq}, #{cmt_content}, #{user_id})") 
+	  @Insert("insert into comment_info(test_seq, cmt_content,cmt_dt, user_id) values (#{test_seq}, #{cmt_content},sysdate, #{user_id})") 
 	  public int comment(Comment_infoDTO dto);
 	  
 	  @Select("select * from comment_info where user_id = #{user_id} and test_seq = #{test_seq}") 
 	  public Comment_infoDTO myPage(Comment_infoDTO dto);
 	  
-	  @Select ("select * from comment_info where test_seq = #{test_seq}") 
+	  @Select ("select * from comment_info where test_seq = #{test_seq} order by cmt_seq desc" ) 
 	  public List<Comment_infoDTO> showComment(int test_seq);
 	  
 	  @Delete("delete from comment_info where cmt_seq = #{cmt_seq}")

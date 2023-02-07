@@ -83,7 +83,7 @@ public class TestRestController {
 		System.out.println("paramMap =>"+files[0]);
 
 		//String filepath = "C:/eGovFrame-4.0.0/workspace.edu/LF/src/saveFolder/";
-		String filepath = "C:/Users/SMHRD/lf/public/file/";
+		String filepath = "C:/Users/smhrd/Desktop/REACT/public/file/";
 		   for (MultipartFile mf : files) {
 
 	            String originFileName = mf.getOriginalFilename(); // 원본 파일 명
