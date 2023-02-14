@@ -1,5 +1,5 @@
 # 🌈Ready Cast (팀명 : Learning-Factory)
-<p align="center"><img src="https://user-images.githubusercontent.com/112142281/218611766-709e6c4c-1982-4908-aa58-204c30a7a563.png"/></p>
+<p align="left"><img width = "150px" src="https://user-images.githubusercontent.com/112142281/218611766-709e6c4c-1982-4908-aa58-204c30a7a563.png"/></p>
 
 ## 👀 서비스 소개
 * <b>서비스명</b>: STT 기반 라이브 커머스 판매전략 가이드 라인 서비스
@@ -13,6 +13,7 @@
 ## ⭐ 주요 기능
 * 라이브 커머스 쇼 호스트의 대사 긍정적 소비자 이벤트 키워드 제공
 * 상품 카테고리별 리뷰 긍정, 부정 키워드 제공
+* 모의 등록한 라이브 커머스 영상 피드백
 
 ## ⛏ 기술스택
 <table>
@@ -40,12 +41,6 @@
             <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white" />
             <img src="https://img.shields.io/badge/Apache Tomcat 9.0-FFD425?style=for-the-badge&logo=Apache Tomcat&logoColor=black" />
             <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"/> 
-        </td>
-    </tr>
-    <tr>
-        <td>Library & API</td>
-        <td>
-            수정해야함
         </td>
     </tr>
     <tr>
