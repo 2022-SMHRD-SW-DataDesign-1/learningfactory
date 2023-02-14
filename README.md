@@ -68,7 +68,7 @@
 </table>
 <br>
 
-## ⚙ 시스템 아키텍처(구조) 예시 
+## ⚙ 시스템 아키텍처
 ![시스템 아키텍처](https://user-images.githubusercontent.com/112142281/218612824-75608aa5-335c-497b-8073-f54552ef4f01.png)
 <br>
 
