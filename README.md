@@ -138,7 +138,7 @@
     <th>모의 테스트 업로드 4</th>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/112142281/218614258-976bd003-6e52-487a-b738-d756beed48dd.png"/></td>
+    <td><img src="https://user-images.githubusercontent.com/112142281/218623322-fe6ba975-b428-4a32-a139-d6b0b051c2f6.png"/></td>
   </tr>
 </table>
 <br>
@@ -152,6 +152,7 @@
     <td><img src="https://user-images.githubusercontent.com/112142281/218614495-bf00c019-5b9e-4fe3-88ab-7532da7e90d3.png"/></td>
   </tr>
 </table>
+
 <br>
 
 ### 🖱 모의 테스트 상세 페이지
