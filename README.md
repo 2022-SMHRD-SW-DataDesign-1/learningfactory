@@ -114,6 +114,17 @@
 </table>
 <br>
 
+### 🖱 마이 페이지
+<table>
+  <tr>
+    <th>마이 페이지</th>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/112142281/218631904-e95a9503-e2bb-4cf6-99c1-215c968ce6ce.png"/></td>
+  </tr>
+</table>
+<br>
+
 ### 🖱 모의 테스트 업로드
 <table>
   <tr>
