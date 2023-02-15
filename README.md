@@ -228,7 +228,7 @@
       3. Spring Framework 기능 구현
     </td>
     <td>
-      1. 
+      1. Data Mining
     </td>
   </tr>
 </table>
