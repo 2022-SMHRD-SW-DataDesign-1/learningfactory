@@ -205,35 +205,30 @@
   </tr>
   <tr>
     <td>
-      1. <br>
-      2. 
+      1. PM<br>
+      2. DB 구축<br>
+      3. Spring Famework 설계<br>
+      4. UI/UX 설계
     </td>
     <td>
-      1. <br>
-      2. <br>
-      3. <br>
-      4. 
+      1. Data Mining<br>
+      2. Spring Framework 기능 구현
     </td>
     <td>
-      1. <br>
-      2. <br>
-      3. 
+      1. Page Component UI/UX 설계<br>
+      2. 댓글, 좋아요 기능 구현
     </td>
     <td>
-      1. <br>
-      2. <br>
-      3. <br>
-      4. 
+      1. Page Component UI/UX 설계<br>
+      2. React 설계
     </td>
     <td>
-      1. <br> 
-      2. <br>
-      3. 
+      1. Spring 환경설정<br> 
+      2. Spring-React 연동<br>
+      3. Spring Framework 기능 구현
     </td>
     <td>
-      1. <br> 
-      2. <br>
-      3. 
+      1. 
     </td>
   </tr>
 </table>
