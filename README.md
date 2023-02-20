@@ -185,7 +185,6 @@
     <td align="center"><img src="https://user-images.githubusercontent.com/112142281/218614854-0537cdb9-4c73-417b-ad2c-e6ac8785881e.png" width="100" height="100"/></td>
     <td align="center"><img src="https://user-images.githubusercontent.com/112142281/218614854-0537cdb9-4c73-417b-ad2c-e6ac8785881e.png" width="100" height="100"/></td>
     <td align="center"><img src="https://user-images.githubusercontent.com/112142281/218614854-0537cdb9-4c73-417b-ad2c-e6ac8785881e.png" width="100" height="100"/></td>
-    <td align="center"><img src="https://user-images.githubusercontent.com/112142281/218614854-0537cdb9-4c73-417b-ad2c-e6ac8785881e.png" width="100" height="100"/></td>
   </tr>
   <tr>
     <td align="center"><strong>이성재</strong></td>
@@ -193,7 +192,6 @@
     <td align="center"><strong>주하영</strong></td>
     <td align="center"><strong>한대찬</strong></td>
     <td align="center"><strong>서창국</strong></td>
-    <td align="center"><strong>안우중</strong></td>
   </tr>
   <tr>
     <td align="center"><b>PM, Back End</b></td>
@@ -201,7 +199,6 @@
     <td align="center"><b>Front-End, Back-End</b></td>
     <td align="center"><b>Front-End, Back-End</b></td>
     <td align="center"><b>Back-End, DA/M</b></td>
-    <td align="center"><b>DA/M</b></td>
   </tr>
   <tr>
     <td>
@@ -226,9 +223,6 @@
       1. Spring 환경설정<br> 
       2. Spring-React 연동<br>
       3. Spring Framework 기능 구현
-    </td>
-    <td>
-      1. Data Mining
     </td>
   </tr>
 </table>
